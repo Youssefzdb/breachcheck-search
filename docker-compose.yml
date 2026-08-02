@@ -1,0 +1,13 @@
+services:
+  breachcheck:
+    build: .
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./breachcheck_index.db:/app/breachcheck_index.db
+      - ./data:/data
+    environment:
+      - DB_PATH=/app/breachcheck_index.db
+      - API_KEY=  # Set your API key here (optional)
+      - RATE_LIMIT=0  # Requests per minute (0 = unlimited)
+    restart: unless-stopped

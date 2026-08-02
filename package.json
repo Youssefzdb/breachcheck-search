@@ -1,0 +1,17 @@
+{
+  "name": "breachcheck-search",
+  "version": "5.0.0",
+  "description": "BreachCheck — Fast search in 280GB breach archive via API",
+  "main": "server.py",
+  "scripts": {
+    "start": "python3 server.py --port 8080",
+    "build": "python3 build_index.py --workers 20",
+    "search": "python3 search_client.py"
+  },
+  "dependencies": {
+    "flask": ">=3.0",
+    "requests": ">=2.31",
+    "pysocks": ">=1.7",
+    "dissect": ">=1.0"
+  }
+}
