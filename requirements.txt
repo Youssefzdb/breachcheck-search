@@ -1,0 +1,4 @@
+# BreachCheck Tor Search — Requirements
+requests>=2.31.0
+pysocks>=1.7.1
+dissect>=1.0.0
